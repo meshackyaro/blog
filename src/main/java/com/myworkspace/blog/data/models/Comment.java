@@ -8,7 +8,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document("comments")
 public class Comment {
     private String id;
-    private String comment;
+    private String title;
+    private String content;
     @DBRef
-    private User commenter;
+    private String commenter;
 }

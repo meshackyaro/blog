@@ -1,5 +1,6 @@
 package com.myworkspace.blog.services;
 
+import com.mongodb.client.model.BulkWriteOptions;
 import com.myworkspace.blog.data.models.User;
 import com.myworkspace.blog.data.repositories.CommentRepository;
 import com.myworkspace.blog.data.repositories.UserRepository;
@@ -29,6 +30,8 @@ public class CommentServiceTest {
     private PostService postService;
     @Autowired
     private CommentRepository commentRepository;
+    @Autowired
+    private CommentService commentService;
 
     @Test
     public void addCommentTest() {
@@ -61,6 +64,7 @@ public class CommentServiceTest {
         addCommentRequest.setTitle("title");
         addCommentRequest.setContent("content");
         addCommentRequest.setCommenter("commenter");
-        AddCommentResponse addCommentResponse = Repository.findByTitle()
+        AddCommentResponse addCommentResponse = commentService.comment(addCommentRequest);
+
     }
 }

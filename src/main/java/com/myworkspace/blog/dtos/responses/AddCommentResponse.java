@@ -4,7 +4,8 @@ import lombok.Data;
 
 @Data
 public class AddCommentResponse {
-    private String comment;
     private String title;
-    private String author;
+    private String content;
+    private String commenter;
+    private String message;
 }
