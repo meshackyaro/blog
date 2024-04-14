@@ -1,4 +1,4 @@
-package com.myworkspace.blog.data.model;
+package com.myworkspace.blog.data.models;
 
 import lombok.Data;
 import org.springframework.data.mongodb.core.mapping.DBRef;
